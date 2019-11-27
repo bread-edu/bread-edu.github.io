@@ -1,15 +1,23 @@
-/*
-	white: #EEE;
-	gray: #AAA;
-	blue: #00AAFF;
-	black: #000;
+/* General and languages
+
+Color scheme:
+- white (#EEE)
+- gray  (#AAA)
+- blue  (#00AAFF)
+- black (#000)
+
+Languages supported:
+- English  (monospace)
+- Spanish  (monospace)
+- Japanese (sans-serif)
+- Chinese  (sans-serif)
 */
 
 * {
 	font-family: "Share Tech Mono", monospace;
 	background-color: #000;
-	color: #AAA;
-	line-height: 1.5;
+	color: #EEE;
+	line-height: 2;
 
 	box-sizing: border-box;
 	padding: 0;
@@ -18,30 +26,83 @@
 	margin: 0;
 }
 
-body {
-	margin: 10vw;
+*:lang(ja) {
+	font-family: "Noto Sans JP", sans-serif;
 }
 
-p {
-	margin: 1em 0em;
+*:lang(zh-Hans) {
+	font-family: "Noto Sans SC", sans-serif;
+}
+
+*:lang(zh-Hant) {
+	font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+	margin: 10vw;
+	font-size: 1.2rem;
+}
+
+/* Headings and text
+
+- h1-h3      (headings and navigation)
+- h4         (theorem headings)
+- strong     (emphasis)
+- span, b, i (symbols and foreign languages)
+- a          (links)
+*/
+
+h4, strong {
+	color: #00AAFF;
+}
+
+span, b, i, a:hover, a:active {
+	color: #AAA;
+}
+
+/* Structures
+
+- nav           (navigation menu)
+- ul            (navigation menu)
+- p             (text)
+- blockquote    (theorems)
+- img           (image)
+- table, th, td (table)
+*/
+
+p, img, blockquote, table {
+	display: block;
+	width: 100%;
+	margin: 2.5em 0;
+}
+
+nav {
+	margin: 5em 0;
 }
 
 ul {
 	list-style-type: none;
-	margin-left: 2.25em;
+	margin-left: 2.2em;
 }
 
-h1, h2, h3, h4, span, b, i, a:hover, a:active {
-	color: #EEE;
+blockquote {
+	width: auto;
+	margin-left: 2.2em;
 }
 
-strong {
-	font-weight: normal;
-	color: #00AAFF;
-}
-
-img {
-	display: block;
+table {
+	display: table;
+	table-layout: fixed;
 	width: 100%;
-	margin: 2em auto;
+	border-collapse: collapse;
+	border-top: 2.2px solid #EEE;
+	border-bottom: 2.2px solid #EEE;
+}
+
+th, td {
+	padding: 1em 0;
+}
+
+th {
+	border-bottom: 1px solid #EEE;
 }
