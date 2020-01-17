@@ -15,3 +15,4 @@
 03/08: AI 2, Abstract algebra 2
 
 03/15: Spanish 4, Music 3, Japanese 3, Analysis 1
+
