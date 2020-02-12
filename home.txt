@@ -1,0 +1,88 @@
+<div class = "arrow" id = "l"><!--˂--></div>
+<div class = "arrow" id = "r">˃</div>
+<div class = "arrow" id = "u"><!--˄--></div>
+<div class = "arrow" id = "d"><!--˅--></div>
+<main>
+  <div id = "word"><h1>Bread</h1></div>
+  <div id = "dash"><p>—</p></div>
+  <div id = "text"><p>Bite-sized bits of bread<br>Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a></p></div>
+</main>
+
+
+* {
+font-family: "Roboto", sans-serif;
+	background-color: #000;
+	color: #EEE;
+	line-height: 2;
+
+	box-sizing: border-box;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	margin: 0;
+  border: 0px solid red;
+}
+
+body {
+  font-size: 1.2rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template:
+    " .                    u                    ." minmax(2em, 12.5vw)
+    " l                    m                    r" 1fr
+    " .                    d                    ." minmax(2em, 12.5vw)
+    / minmax(2em, 12.5vw) 1fr minmax(2em, 12.5vw);
+}
+.arrow {
+  align-self: center;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+#l { grid-area: l; }
+#r { grid-area: r; }
+#u { grid-area: u; }
+#d { grid-area: d; }
+main {
+  grid-area: m;
+  align-self: center;
+  height: calc(100vh - 25vw);
+  overflow-y: scroll;
+  
+  display: grid;
+  grid-template:
+    "word" 1fr
+    "dash" 2em
+    "text" 1fr;
+}
+#word {
+grid-area: word;
+  align-self: end;
+}
+#word > h1 {
+  line-height: 1;
+  font-size: 4em;
+}
+#dash {
+  grid-area: dash;
+  align-self: center;
+}
+#dash > p {
+  line-height: 1;
+  font-size: 2em;
+  color: #0AF;
+}
+#text {
+  grid-area: text;
+  align-self: start;
+  overflow-y: scroll;
+}
+
+.arrow, a {
+  transition: 0.25s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+  color: #0AF;
+}
