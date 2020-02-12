@@ -11,35 +11,6 @@ deprecated arrows:
 <div class = "arrow" id = "u"><!--˄--></div>
 <div class = "arrow" id = "d"><!--˅--></div>
 
-title:
-<div class = "arrow" id = "l"></div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<div>
-		<h1>Bread</h1>
-		<p id = "dash">⎯⎯⎯⎯⎯</p>
-		<p id = "desc">Bite-sized bits of bread<br>Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a></p>
-	</div>
-</main>
-
-nav:
-<div class = "arrow" id = "l">╱<br>╲</div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<nav>
-		<a href = "/math/">Mathematics</a><br>
-		<a href = "/cs/">Computer science</a><br>
-		<a href = "/physics/">Physics</a><br>
-		<a href = "/music/">Music</a><br>
-		<a href = "/chinese/">Chinese</a> (中文)<br>
-		<a href = "/japanese/">Japanese</a> (日本語)<br>
-		<a href = "/spanish/">Spanish</a> (español)
-	</nav>
-</main>
 
 math:
 <div class = "arrow" id = "l">╱<br>╲</div>
@@ -90,32 +61,6 @@ music:
 		<h1>Music</h1>
 		<p id = "dash">⎯⎯⎯⎯⎯</p>
 		<p id = "desc"><strong>Music</strong> is a fundamental language for expression.<br></p>
-	</div>
-</main>
-
-chinese:
-<div class = "arrow" id = "l">╱<br>╲</div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<div>
-		<h1>Chinese</h1>
-		<p id = "dash">⎯⎯⎯⎯⎯</p>
-		<p id = "desc"><strong>Chinese</strong> (中文) is a human language and collective identity.<br></p>
-	</div>
-</main>
-
-japanese:
-<div class = "arrow" id = "l">╱<br>╲</div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<div>
-		<h1>Japanese</h1>
-		<p id = "dash">⎯⎯⎯⎯⎯</p>
-		<p id = "desc"><strong>Japanese</strong> (日本語) is a human language and collective identity.<br></p>
 	</div>
 </main>
 
