@@ -12,6 +12,40 @@ deprecated arrows:
 <div class = "arrow" id = "d"><!--˅--></div>
 
 
+		<h2 id = "language">0 <a href = "#">japanese</a> &#62; language</h2>
+		<p>
+			<strong>Japanese</strong> (<span lang = "ja">日本語</span>) is a language for human expression.
+		</p><p>
+			This course is written for Chinese speakers with knowledge of English learning Japanese, covering basic elements of Japanese; it will not cover advanced elements, lingustic variants, or the literature, history, and culture of Japan. 
+		</p>
+
+		<p>
+			Spanish is one of the most commonly used languages in the world; thus, learning Spanish greatly expands one’s ability of communication and expression.
+		</p><p>
+			Generally, <strong>languages</strong> (<span lang = "es">las lenguas</span>) are systems of communication and expression with four elements: listening, reading, speaking, and writing, which are learned through a combination of <strong>practice</strong> (<span lang = "es">práctica</span>) and <strong>immersion</strong> (<span lang = "es">inmersión</span>).
+		</p><p>
+			Specifically, learning Spanish as an English speaker is an interesting and rather easy process, because Spanish and English are two of the most similar languages despite belonging to different families.
+		</p>
+		
+		<h2 id = "units">1 <a href = "#">japanese</a> &#62; units</h2>
+		<p><strong>Units</strong> (<span lang = "ja">単位</span>) are the smallest elements of language.</p>
+		<p>Coming 1/19/2020</p>
+		
+		<h2 id = "words">2 <a href = "#">japanese</a> &#62; words</h2>
+		<p><strong>Words</strong> (<span lang = "ja">言葉</span>) are the smallest units of language with independent meaning.</p>
+		<p>Coming 2/16/2020</p>
+		
+		<h2 id = "sentences">3 <a href = "#">japanese</a> &#62; sentences</h2>
+		<p>Coming 3/15/2020</p>
+		
+		<h2 id = "expression">4 <a href = "#">japanese</a> &#62; expression</h2>
+		<p>Coming 2020</p>
+
+
+
+
+
+
 math:
 <div class = "arrow" id = "l">╱<br>╲</div>
 <div class = "arrow" id = "r">╲<br>╱</div>
