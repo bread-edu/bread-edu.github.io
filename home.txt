@@ -1,25 +1,136 @@
+arrows:
+
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u">╱╲</div>
+<div class = "arrow" id = "d">╲╱</div>
+
+deprecated arrows:
 <div class = "arrow" id = "l"><!--˂--></div>
 <div class = "arrow" id = "r">˃</div>
 <div class = "arrow" id = "u"><!--˄--></div>
 <div class = "arrow" id = "d"><!--˅--></div>
+
+title:
+<div class = "arrow" id = "l"></div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
 <main>
-	<div id = "word"><h1>Bread</h1></div>
-	<div id = "dash"><p>—</p></div>
-	<div id = "text"><p>Bite-sized bits of bread<br>Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a></p></div>
+	<div>
+		<h1>Bread</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc">Bite-sized bits of bread<br>Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a></p>
+	</div>
 </main>
 
-<div class = "arrow" id = "l">˂</div>
-<div class = "arrow" id = "r">˃</div>
-<div class = "arrow" id = "u"><!--˄--></div>
-<div class = "arrow" id = "d"><!--˅--></div>
+nav:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
 <main>
-	<div id = "word"><h1>Math</h1></div>
-	<div id = "dash"><p>—</p></div>
-	<div id = "text"><p><strong>Math</strong> is a fundamental language.</p></div>
+	<nav>
+		<a href = "/math/">Mathematics</a><br>
+		<a href = "/cs/">Computer science</a><br>
+		<a href = "/physics/">Physics</a><br>
+		<a href = "/music/">Music</a><br>
+		<a href = "/chinese/">Chinese</a> (中文)<br>
+		<a href = "/japanese/">Japanese</a> (日本語)<br>
+		<a href = "/spanish/">Spanish</a> (español)
+	</nav>
 </main>
 
+math:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Mathematics</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Mathematics</strong> is a fundamental language for existence and change.<br></p>
+	</div>
+</main>
 
-For title pages
+cs:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Computer science</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Computer science</strong> is a fundamental language for existence and change.<br></p>
+	</div>
+</main>
+
+physics:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Physics</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Physics</strong> is a fundamental language for existence and change.<br></p>
+	</div>
+</main>
+
+music:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Music</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Music</strong> is a fundamental language for expression.<br></p>
+	</div>
+</main>
+
+chinese:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Chinese</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Chinese</strong> (中文) is a human language and collective identity.<br></p>
+	</div>
+</main>
+
+japanese:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Japanese</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Japanese</strong> (日本語) is a human language and collective identity.<br></p>
+	</div>
+</main>
+
+spanish:
+<div class = "arrow" id = "l">╱<br>╲</div>
+<div class = "arrow" id = "r">╲<br>╱</div>
+<div class = "arrow" id = "u"></div>
+<div class = "arrow" id = "d"></div>
+<main>
+	<div>
+		<h1>Spanish</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Spanish</strong> (español) is a human language and collective identity.<br></p>
+	</div>
+</main>
 
 
 * {
@@ -33,6 +144,7 @@ For title pages
 	outline: 0;
 	border: 0;
 	margin: 0;
+	border: 1px solid red;
 }
 
 *:lang(ja) {
@@ -62,16 +174,19 @@ body {
 }
 
 .arrow {
-  align-self: center;
-  text-align: center;
-  font-size: 1.25em;
-  line-height: 1.6;
+	align-self: center;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1;
+	/* question mark */
+	font-weight: bold;
 }
 .arrow, a {
 	transition: 0.25s;
 }
 .arrow:hover, .arrow:active, a:hover, a:active {
 	color: #0AF;
+	/*font-weight: bold;*/
 }
 #l {
 	grid-area: l;
@@ -85,6 +200,56 @@ body {
 #d {
 	grid-area: d;
 }
+
+main {
+	grid-area: m;
+	height: calc(100vh - 25vw);
+	align-self: center;
+	overflow-y: scroll;
+
+	display: grid;
+	align-items: center;
+}
+#dash {
+	font-weight: 900;
+	color: #0AF;
+}
+#desc {
+	font-size: 1.25em;
+}
+h1 {
+	font-size: 5em;
+	line-height: 1;
+}
+/* no need for nav */
+
+
+
+
+
+
+
+
+<main>
+	<div id = "word"><h1>Bread</h1></div>
+	<div id = "dash"><p>—</p></div>
+	<div id = "text"><p>Bite-sized bits of bread<br>Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a></p></div>
+</main>
+
+<div class = "arrow" id = "l">˂</div>
+<div class = "arrow" id = "r">˃</div>
+<div class = "arrow" id = "u"><!--˄--></div>
+<div class = "arrow" id = "d"><!--˅--></div>
+<main>
+	<div id = "word"><h1>Math</h1></div>
+	<div id = "dash"><p>—</p></div>
+	<div id = "text"><p><strong>Math</strong> is a fundamental language.</p></div>
+</main>
+
+
+For title pages
+
+
 
 main {
 	grid-area: m;
@@ -153,106 +318,4 @@ table {
 }
 ul {
 	
-}
-nav {
-	border: 1px solid red;
-}
-
-
-
-
-
-For nav pages
-
-<div class = "arrow" id = "l">˂</div>
-<div class = "arrow" id = "r">˃</div>
-<div class = "arrow" id = "u"><!--˄--></div>
-<div class = "arrow" id = "d"><!--˅--></div>
-<main>
-	<nav>
-		<a href = "/">Math</a><br>
-		<a href = "/">Computing</a><br>
-		<a href = "/">Physics</a><br>
-		<a href = "/">Music</a><br>
-		<a href = "/">Chinese</a><br>
-		<a href = "/">Japanese</a><br>
-		<a href = "/">Spanish</a>
-	</nav>
-</main>
-
-
-* {
-	font-family: "Roboto", "Noto Sans", sans-serif;
-	background-color: #000;
-	color: #E1E1E1;
-	line-height: 2;
-
-	box-sizing: border-box;
-	padding: 0;
-	outline: 0;
-	border: 0;
-	margin: 0;
-}
-
-*:lang(ja) {
-	font-family: "Noto Sans JP", sans-serif;
-}
-
-*:lang(zh-Hans) {
-	font-family: "Noto Sans SC", sans-serif;
-}
-
-*:lang(zh-Hant) {
-	font-family: "Noto Sans TC", sans-serif;
-}
-
-body {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-	font-size: 1.2rem;
-
-	display: grid;
-	grid-template:
-		" .                    u                    ." minmax(2em, 12.5vw)
-		" l                    m                    r" 1fr
-		" .                    d                    ." minmax(2em, 12.5vw)
-		/ minmax(2em, 12.5vw) 1fr minmax(2em, 12.5vw);
-}
-
-.arrow {
-  align-self: center;
-  text-align: center;
-  font-size: 1.25em;
-  line-height: 1.6;
-}
-.arrow, a {
-	transition: 0.25s;
-}
-.arrow:hover, .arrow:active, a:hover, a:active {
-	color: #0AF;
-}
-#l {
-	grid-area: l;
-}
-#r {
-	grid-area: r;
-}
-#u {
-	grid-area: u;
-}
-#d {
-	grid-area: d;
-}
-
-main {
-	grid-area: m;
-	height: calc(100vh - 25vw);
-	align-self: center;
-	overflow-y: scroll;
-
-	display: grid;
-}
-nav {
-	margin: auto 0;
 }
