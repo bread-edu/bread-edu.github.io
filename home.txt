@@ -5,12 +5,6 @@ arrows:
 <div class = "arrow" id = "u">╱╲</div>
 <div class = "arrow" id = "d">╲╱</div>
 
-deprecated arrows:
-<div class = "arrow" id = "l"><!--˂--></div>
-<div class = "arrow" id = "r">˃</div>
-<div class = "arrow" id = "u"><!--˄--></div>
-<div class = "arrow" id = "d"><!--˅--></div>
-
 
 		<h2 id = "language">0 <a href = "#">japanese</a> &#62; language</h2>
 		<p>
@@ -82,32 +76,6 @@ physics:
 		<h1>Physics</h1>
 		<p id = "dash">⎯⎯⎯⎯⎯</p>
 		<p id = "desc"><strong>Physics</strong> is a fundamental language for existence and change.<br></p>
-	</div>
-</main>
-
-music:
-<div class = "arrow" id = "l">╱<br>╲</div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<div>
-		<h1>Music</h1>
-		<p id = "dash">⎯⎯⎯⎯⎯</p>
-		<p id = "desc"><strong>Music</strong> is a fundamental language for expression.<br></p>
-	</div>
-</main>
-
-spanish:
-<div class = "arrow" id = "l">╱<br>╲</div>
-<div class = "arrow" id = "r">╲<br>╱</div>
-<div class = "arrow" id = "u"></div>
-<div class = "arrow" id = "d"></div>
-<main>
-	<div>
-		<h1>Spanish</h1>
-		<p id = "dash">⎯⎯⎯⎯⎯</p>
-		<p id = "desc"><strong>Spanish</strong> (español) is a human language and collective identity.<br></p>
 	</div>
 </main>
 
