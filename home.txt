@@ -1,3 +1,30 @@
+<div class = "arrow" id = "up">╱╲</div>
+<main>
+	<div>
+		<h1>BREAD</h1>
+		<div class = "arrows" id = "depth">
+			<span class = "left">╱</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class = "right">╲</span><br>
+			<span class = "left">╲</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class = "right">╱</span>
+		</div>
+		<nav>
+			<a href = "/math/">Mathematics</a><br>
+			<a href = "/cs/">Computer science</a><br>
+			<a href = "/physics/">Physics</a><br>
+			<a href = "/music/">Music</a><br>
+			<a href = "/chinese/">Chinese</a> (中文)<br>
+			<a href = "/japanese/">Japanese</a> (日本語)<br>
+			<a href = "/spanish/">Spanish</a> (español)
+		</nav>
+		<p>
+			Bite-sized bits of bread<br>
+			Beautifully intuitive ideas by bread-edu
+		</p>
+	</div>
+</main>
+<div class = "arrow" id = "down">╲╱</div>
+
+
+
 arrows:
 
 <div class = "arrow" id = "l">╱<br>╲</div>
