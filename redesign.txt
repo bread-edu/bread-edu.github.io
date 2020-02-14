@@ -1,0 +1,529 @@
+<body id = "index"> <!-- index, title, topic, mid, end -->
+	<nav>
+		<h4>Navigation</h4>
+		<div id = "directions">
+			<div class = "space"></div>
+			<div class = "arrow" id = "u">╱╲</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "l">╱<br>╲</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "r">╲<br>╱</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "d">╲╱</div>
+			<div class = "space"></div>
+		</div>
+		<div id = "pages">
+			<a href = "/math/">Mathematics</a><br>
+			<a href = "/cs/">Computer science</a><br>
+			<a href = "/physics/">Physics</a><br>
+			<a href = "/music/">Music</a><br>
+			<a href = "/chinese/">Chinese</a><br>
+			<a href = "/japanese/">Japanese</a><br>
+			<a href = "/spanish/">Spanish</a>
+		</div>
+	</nav>
+	<h1>Bread</h1>
+	<p id = "desc">
+		Bite-sized bits of bread<br>
+		Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a>
+	</p>
+</body>
+
+
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	margin: 0;
+
+	font-family: "Roboto", "Noto Sans", sans-serif;
+	line-height: 2;
+	background-color: #000;
+	color: #E1E1E1;
+}
+*:lang(ja) {
+	font-family: "Noto Sans JP", sans-serif;
+}
+*:lang(zh-Hans) {
+	font-family: "Noto Sans SC", sans-serif;
+}
+*:lang(zh-Hant) {
+	font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+	width: 70vw;
+	height: 100vh;
+	margin: 0 15vw;
+	oveflow: scroll;
+	font-size: 1.25rem;
+	
+	display: grid;
+	align-items: center;
+}
+
+nav {
+	padding-top: 8vw;
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	align-items: center;
+	color: #DDD;
+}
+nav h4 {
+	line-height: 1;
+	color: #DDD;
+	transition: color 0.5s;
+}
+nav h4::after {
+	content: "━━━";
+	padding-top: 0.5em;
+	display: block;
+	color: #0AF;
+}
+#directions {
+	align-self: start;
+	display: inline-grid;
+	grid-template:
+		" .                u                . " min-content
+		" l                .                r " min-content
+		" .                d                . " min-content
+		/ min-content min-content min-content;
+}
+.arrow {
+	display: inline-block;
+	text-align: center;
+	font-size: 0.6em;
+	line-height: 1;
+	font-weight: bolder;
+	user-select: none;
+}
+#pages {
+	display: none;
+	opacity: 0;
+}
+#pages a::after {
+	animation: pulsate 1s ease-in-out infinite alternate;
+}
+#pages a:hover::after {
+	display: inline-block;
+	text-decoration: none;
+	white-space: pre;
+	content: " »";
+}
+@keyframes pulsate {
+	0% {
+		color: #0AF;
+	} 100% {
+		color: #000;
+	}
+}
+
+h1 {
+	padding: 0.5em 0;
+	font-size: 5em;
+	line-height: 1;
+}
+
+/*
+p {
+	margin-bottom: 1em;
+}
+*/
+
+#desc {
+	padding-bottom: 8vw;
+	margin: 0;
+}
+
+.arrow, a {
+	transition: 0.25s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+	color: #0AF;
+}
+.disabled, .disabled:hover, .disabled:active {
+	color: #888;
+}
+
+
+
+var allDirections = ["#u", "#l", "#r", "#d"];
+var validDirections = validDirections();
+
+function validDirections() {
+	// IDs: index, title, topic, mid, end
+	pageType = $("body").attr("id");
+	if (pageType == "index") {
+		return ["#r"];
+	} else if (pageType == "title") {
+		return ["#l", "#r"];
+	} else if (pageType == "topic") {
+		return ["#l", "#d"];
+	} else if (pageType == "mid") {
+		return ["#u", "#l", "#d"];
+	} else { // if (pageType == "end")
+		return ["#u", "#l"];
+	}
+	return allDirections;
+}
+function disableAllBut(arrow) {
+	$.each(validDirections, function(index, id) {
+		if (id != arrow) {
+			$(id).addClass("disabled");
+		}
+	});
+};
+function enableAll() {
+	$.each(validDirections, function(index, id) {
+		$(id).removeClass("disabled");
+	});
+};
+
+function anim($elem, properties) {
+	$elem.animate(properties, { duration: 500, queue: false });
+}
+function show($elem) {
+	anim($elem.slideDown(500), { opacity: 1 });
+}
+function hide($elem) {
+	anim($elem.slideUp(500), { opacity: 0 });
+}
+function blue($elem) {
+	$elem.css("color", "#0AF");
+}
+function eulb($elem) {
+	$elem.css("color", "#DDD");
+}
+
+$(document).ready(function() {
+	$.each(allDirections, function(index, id) {
+		if (!validDirections.includes(id)) {
+			$(id).addClass("disabled");
+		}
+	});
+	
+	$("#l").click(function() {
+		if (!$("#l").hasClass("disabled")) {
+			window.location.href = "../";
+		}
+	});
+	
+	$("#r").click(function() {
+		$pages = $("#pages");
+		$float = $("nav h4");
+		if ($pages.css("display") == "none") {
+			show($pages);
+			blue($float);
+			disableAllBut("#r");
+		} else {
+			hide($pages);
+			eulb($float);
+			enableAll();
+		}
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+previous versions:
+
+<div id = "all">
+	<header>
+		<h1>TITLE</h1>
+		<div id = "carrots">
+			<div class = "arrow disabled" id = "l">╱<br>╲</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "r">╲<br>╱</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "u">╱╲</div>
+			<div class = "space"></div>
+			<div class = "arrow" id = "d"><br>╲╱</div>
+		</div>
+	</header>
+	<nav>
+		<a href = "/math/">Mathematics</a><br>
+		<a href = "/cs/">Computer science</a><br>
+		<a href = "/physics/">Physics</a><br>
+		<a href = "/music/">Music</a><br>
+		<a href = "/chinese/">Chinese</a><br>
+		<a href = "/japanese/">Japanese</a><br>
+		<a href = "/spanish/">Spanish</a>
+	</nav>
+	<main>
+		<p>
+			Bite-sized bits of bread<br>
+			Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a>
+		</p>
+	</main>
+</div><!--
+			<span class = "arrow" id = "lt">╱</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class = "arrow" id = "rt">╲</span><br>
+			<span class = "arrow" id = "lb">╲</span> &nbsp;&nbsp;&nbsp;&nbsp; <span class = "arrow" id = "rb">╱</span> -->
+			
+* {
+	box-sizing: border-box;
+	background-color: black;
+	color: #E1E1E1;
+	margin: 0;
+	font-family: "Courier New", sans-serif;
+	line-height: 2;
+	border: 1px solid red;
+}
+
+/* Layout elements: body, main */
+body {
+	width: 69vw;
+	height: calc(100vh - 20vw);
+	margin: 10vw 15.5vw;
+	overflow: scroll;
+	font-size: 1.5rem;
+	
+	display: grid;
+	/* grid-template-rows: minmax(2em, 8vw) 1fr minmax(2em, 8vw); */
+	align-items: center;
+}
+
+#all {
+	max-height: 100%;
+	overflow: scroll;
+}
+
+/*
+main {
+	height: min(calc(100vh - 4em), calc(100vh - 16vw));
+	display: grid;
+	overflow: scroll;
+	align-items: center;
+} */
+
+/* Navigational elements: nav, a, ˂˃˄˅ */
+
+nav::after {
+	display: block;
+	content: "⎯⎯⎯⎯⎯⎯";
+	color: #0AF;
+	font-weight: bold;
+}
+nav {
+	display: block;
+}
+nav > a::after {
+	animation: pulsate 1s ease-in-out infinite alternate;
+}
+nav > a:hover::after {
+	display: inline-block;
+	text-decoration: none;
+	white-space: pre;
+	content: " »";
+}
+@keyframes pulsate {
+	0% {
+		color: #0AF;
+	} 100% {
+		color: #000;
+	}
+}
+
+
+#carrots {
+	display: grid;
+	grid-template-columns: min-content 3em min-content 1fr min-content 2em min-content;
+}
+
+#carrots > div {
+	display: inline-block;
+	line-height: 1;
+}
+
+
+h1 {
+	font-size: 5em;
+	line-height: 1;
+}
+/*
+#depth {
+	margin: 1em 0;
+	font-size: 1em;
+	line-height: 1;
+	font-weight: bolder;
+	user-select: none;
+}
+
+#depth > span {
+	line-height: 1;
+	margin: 0;
+	color: #AAA;
+} */
+.arrow {
+	text-align: center;
+	font-weight: bold;
+	user-select: none;
+}
+.arrow, a {
+	transition: 0.2s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+	color: #0AF;
+}
+.disabled, .disabled:hover, .disabled:active {
+	color: #AAA;
+}
+/*
+#depth > .right {
+	color: #E1E1E1;
+}
+#depth > .right:hover {
+	color: red;
+}
+.right {
+	color: red;
+}*/
+
+function hide($elem) {
+	$elem.css("display", "none");
+};
+function show($elem) {
+	$elem.css("display", "block");
+}
+
+$(document).ready(function() {
+	$("#l").click(function() {
+		if (!$("#l").hasClass("disabled")) {
+			window.location.href = "../";
+		}
+	});
+	
+	$("#r").click(function() {
+		if ($("nav").css("display") == "none") {
+			$("nav").show();
+			$("main").hide();
+			$("$r:hover").css("color", "#0AF !important");
+		} else {
+			$("nav").hide();
+			$("main").show();
+		}
+	});
+});
+
+
+
+
+
+
+
+another previous version:
+<div class = "arrow" id = "l">╱<br>╲</div>
+		<div class = "arrow" id = "r"></div>
+		<div class = "arrow" id = "u">╱╲</div>
+		<div class = "arrow" id = "d">╲╱</div>
+		<main>
+      <div>
+		<h1>Mathematics</h1>
+		<p id = "dash">⎯⎯⎯⎯⎯</p>
+		<p id = "desc"><strong>Mathematics</strong> is a fundamental language for existence and change.<br></p>
+	</div>
+</main<
+
+* {
+	font-family: "Roboto", "Noto Sans", sans-serif;
+	background-color: #000;
+	color: #E1E1E1;
+	line-height: 2;
+
+	box-sizing: border-box;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	margin: 0;
+	border: 1px solid red;
+}
+
+*:lang(ja) {
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+*:lang(zh-Hans) {
+	font-family: "Noto Sans SC", sans-serif;
+}
+
+*:lang(zh-Hant) {
+	font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-size: 1.2rem;
+
+	display: grid;
+	grid-template:
+		" .                    u                    ." minmax(2em, 12.5vw)
+		" l                    m                    r" 1fr
+		" .                    d                    ." minmax(2em, 12.5vw)
+		/ minmax(2em, 12.5vw) 1fr minmax(2em, 12.5vw);
+}
+
+.arrow {
+	align-self: center;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1;
+	/* question mark */
+	font-weight: bold;
+}
+.arrow, a {
+	transition: 0.25s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+	color: #0AF;
+	/*font-weight: bold;*/
+}
+#l {
+	grid-area: l;
+}
+#r {
+	grid-area: r;
+}
+#u {
+	grid-area: u;
+}
+#d {
+	grid-area: d;
+}
+
+main {
+	grid-area: m;
+	height: calc(100vh - 25vw);
+	align-self: center;
+	overflow-y: scroll;
+
+	display: grid;
+	align-items: center;
+}
+#dash {
+	font-weight: 900;
+	color: #0AF;
+}
+#desc {
+	font-size: 1.25em;
+}
+h1 {
+	font-size: 5em;
+	line-height: 1;
+}
