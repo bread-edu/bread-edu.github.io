@@ -1,108 +1,146 @@
-/* General and languages
-
-Color scheme:
-- white (#EEE)
-- gray  (#AAA)
-- blue  (#00AAFF)
-- black (#000)
-
-Languages supported:
-- English  (monospace)
-- Spanish  (monospace)
-- Japanese (sans-serif)
-- Chinese  (sans-serif)
-*/
-
+/* General elements */
 * {
-	font-family: "Share Tech Mono", monospace;
-	background-color: #000;
-	color: #EEE;
-	line-height: 2;
-
 	box-sizing: border-box;
 	padding: 0;
 	outline: 0;
 	border: 0;
 	margin: 0;
-}
 
+	font-family: "Roboto", "Noto Sans", sans-serif;
+	line-height: 2;
+	background-color: #000;
+	color: #DBDBDB;
+}
 *:lang(ja) {
 	font-family: "Noto Sans JP", sans-serif;
 }
-
 *:lang(zh-Hans) {
 	font-family: "Noto Sans SC", sans-serif;
 }
-
 *:lang(zh-Hant) {
 	font-family: "Noto Sans TC", sans-serif;
 }
-
 body {
-	margin: 10vw;
-	font-size: 1.2rem;
+	width: 70vw;
+	height: 100vh;
+	margin: 0 15vw;
+	oveflow: scroll;
+	font-size: 1.25rem;
+	
+	display: grid;
+	align-items: center;
 }
 
-/* Headings and text
 
-- h1-h3      (headings and navigation)
-- h4         (theorem headings)
-- strong     (emphasis)
-- span, b, i (symbols and foreign languages)
-- a          (links)
-*/
-
-h4, strong {
-	color: #00AAFF;
-}
-
-span, b, i, a:hover, a:active {
-	color: #AAA;
-}
-
-/* Structures
-
-- nav           (navigation menu)
-- ul            (navigation menu)
-- p             (text)
-- blockquote    (theorems)
-- img           (image)
-- table, th, td (table)
-*/
-
-p, img, blockquote, table {
-	display: block;
-	width: 100%;
-	margin: 2.5em 0;
-}
-
+/* Navigational elements */
 nav {
-	margin: 5em 0;
+	padding-top: 8vw;
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	align-items: center;
+	color: #DDD;
+}
+nav h4 {
+	line-height: 1;
+	color: #DDD;
+	transition: color 0.5s;
+}
+nav h4::after {
+	content: "━━━";
+	padding-top: 0.5em;
+	display: block;
+	color: #0AF;
+}
+#directions {
+	align-self: start;
+	display: inline-grid;
+	grid-template:
+		" .                u                . " min-content
+		" l                .                r " min-content
+		" .                d                . " min-content
+		/ min-content min-content min-content;
+}
+.arrow {
+	display: inline-block;
+	text-align: center;
+	font-size: 0.6em;
+	line-height: 1;
+	font-weight: bolder;
+	user-select: none;
+}
+.arrow, a {
+	transition: 0.25s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+	color: #0AF;
+}
+.disabled, .disabled:hover, .disabled:active {
+	color: #888;
+}
+#pages {
+	display: none;
+	opacity: 0;
+}
+#pages a::after {
+	animation: pulsate 1s ease-in-out infinite alternate;
+}
+#pages a:hover::after {
+	display: inline-block;
+	text-decoration: none;
+	white-space: pre;
+	content: " »";
+}
+@keyframes pulsate {
+	0% {
+		color: #0AF;
+	} 100% {
+		color: #000;
+	}
 }
 
-ul {
-	list-style-type: none;
-	margin-left: 2.2em;
+/* Heading and text elements */
+h1 {
+	padding: 0.5em 0;
+	font-size: 5em;
+	line-height: 1;
+}
+h4 {
+	
+}
+p {
+	margin-bottom: 1em;
+}
+#desc {
+	padding-bottom: 8vw;
+	margin: 0;
+}
+strong, em {
+	color: #E1E1E1;
+}
+b, i {
+	
+}
+span.lang {
+	
+}
+span.important {
+	
 }
 
-blockquote {
-	width: auto;
-	margin-left: 2.2em;
+/* Structural elements */
+img {
+	
 }
-
 table {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	border-collapse: collapse;
-	border-top: 2.2px solid #EEE;
-	border-bottom: 2.2px solid #EEE;
+	
 }
-
-th, td {
-	padding: 1em 0;
-}
-
 th {
-	border-bottom: 1px solid #EEE;
+	
+}
+td {
+	
+}
+ul {
+	list-style: "─  ";
+	padding: 0;
 }
