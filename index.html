@@ -10,24 +10,29 @@
 		<link rel = "icon" href = "favicon.ico">
 		<link rel = "stylesheet" href = "styles.css" type = "text/css">
 		<link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Noto+Sans&display=swap">
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src = "scripts.js"></script>
 	</head>
-	<body id = "index">
-		<nav>
-			<h4>Navigation</h4>
+	<body>
+		<header>
+			<h4 id = "top">Slices</h4>
 			<div id = "directions">
-				<div class = "space"></div>
-				<div class = "arrow" id = "u">╱╲</div>
-				<div class = "space"></div>
-				<div class = "arrow" id = "l">╱<br>╲</div>
-				<div class = "space"></div>
-				<div class = "arrow" id = "r">╲<br>╱</div>
-				<div class = "space"></div>
-				<div class = "arrow" id = "d">╲╱</div>
-				<div class = "space"></div>
+				<div></div>
+				<div class = "arrow disabled" id = "u">╱╲</div>
+				<div></div>
+				<div class = "arrow disabled" id = "l">╱<br>╲</div>
+				<div></div>
+				<div class = "arrow" id = "r"><a href = "#nav">╲<br>╱</a></div>
+				<div></div>
+				<div class = "arrow disabled" id = "d">╲╱</div>
+				<div></div>
 			</div>
-			<div id = "pages">
+		</header>
+		<main>
+			<h1>Bread</h1>
+			<p>
+				Bite-sized bits of bread<br>
+				Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a>
+			</p>
+			<nav id = "nav">
 				<a href = "/math/">Mathematics</a><br>
 				<a href = "/cs/">Computer science</a><br>
 				<a href = "/physics/">Physics</a><br>
@@ -35,12 +40,7 @@
 				<a href = "/chinese/">Chinese</a><br>
 				<a href = "/japanese/">Japanese</a><br>
 				<a href = "/spanish/">Spanish</a>
-			</div>
-		</nav>
-		<h1>Bread</h1>
-		<p id = "desc">
-			Bite-sized bits of bread<br>
-			Beautifully intuitive ideas by <a href = "mailto:bread.edu.io@gmail.com">bread-edu</a>
-		</p>
+			</nav>
+		</main>
 	</body>
 </html>
