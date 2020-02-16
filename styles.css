@@ -51,21 +51,12 @@ header {
 }
 .arrow {
 	display: inline-block;
-	text-align: center;
 	font-size: 0.6em;
-	line-height: 1;
 	font-weight: bolder;
-	user-select: none;
-}
-.arrow a {
 	line-height: 1;
+	text-align: center;
 	text-decoration: none;
-}
-.arrow, a {
-	transition: 0.25s;
-}
-.arrow:hover, .arrow:active, a:hover, a:active {
-	color: #0AF;
+	user-select: none;
 }
 .disabled, .disabled:hover, .disabled:active {
 	color: #888;
@@ -86,6 +77,12 @@ p, nav, img, table, ul {
 	margin-bottom: 4em;
 }
 
+a {
+	transition: 0.25s;
+}
+a:hover, a:active {
+	color: #0AF;
+}
 nav {
 	padding-bottom: 1.5em;
 	border-bottom: 2px solid #0AF;
