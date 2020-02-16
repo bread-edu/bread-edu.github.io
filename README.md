@@ -1,5 +1,3 @@
-Someone who genuinely wants to make something meaningful out of an empty promise
+Bite-sized bits of bread
 
-I try to explain things using bread
-
-Contact me at bread.edu.io@gmail.com
+Beautifully intuitive ideas by [bread-edu](mailto:bread.edu.io@gmail.com)
