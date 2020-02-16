@@ -1,108 +1,108 @@
-/* General and languages
-
-Color scheme:
-- white (#EEE)
-- gray  (#AAA)
-- blue  (#00AAFF)
-- black (#000)
-
-Languages supported:
-- English  (monospace)
-- Spanish  (monospace)
-- Japanese (sans-serif)
-- Chinese  (sans-serif)
-*/
-
+/* General elements */
 * {
-	font-family: "Share Tech Mono", monospace;
-	background-color: #000;
-	color: #EEE;
-	line-height: 2;
-
 	box-sizing: border-box;
 	padding: 0;
 	outline: 0;
 	border: 0;
 	margin: 0;
-}
 
+	font-family: "Roboto", "Noto Sans", sans-serif;
+	line-height: 2;
+	background-color: #000;
+	color: #DDD;
+}
 *:lang(ja) {
 	font-family: "Noto Sans JP", sans-serif;
 }
-
 *:lang(zh-Hans) {
 	font-family: "Noto Sans SC", sans-serif;
 }
-
 *:lang(zh-Hant) {
 	font-family: "Noto Sans TC", sans-serif;
 }
-
 body {
-	margin: 10vw;
-	font-size: 1.2rem;
+	width: 70vw;
+	height: 100vh;
+	margin: 0 15vw;
+	oveflow: scroll;
+	font-size: 1.25rem;
 }
 
-/* Headings and text
-
-- h1-h3      (headings and navigation)
-- h4         (theorem headings)
-- strong     (emphasis)
-- span, b, i (symbols and foreign languages)
-- a          (links)
-*/
-
-h4, strong {
-	color: #00AAFF;
+header {
+	height: 31vh;
+	display: grid;
+	align-items: end;
+	grid-template-columns: 1fr min-content;
+}
+#top {
+	padding-bottom: 1em;
+	border-bottom: 2px solid #0AF;
+	margin-right: 50%;
+	line-height: 2;
+}
+#directions {
+	align-self: end;
+	display: inline-grid;
+	grid-template:
+		" . u . " min-content
+		" l . r " min-content
+		" . d . " min-content
+		/ min-content min-content min-content;
+}
+.arrow {
+	display: inline-block;
+	text-align: center;
+	font-size: 0.6em;
+	line-height: 1;
+	font-weight: bolder;
+	user-select: none;
+}
+.arrow a {
+	line-height: 1;
+	text-decoration: none;
+}
+.arrow, a {
+	transition: 0.25s;
+}
+.arrow:hover, .arrow:active, a:hover, a:active {
+	color: #0AF;
+}
+.disabled, .disabled:hover, .disabled:active {
+	color: #888;
 }
 
-span, b, i, a:hover, a:active {
-	color: #AAA;
+main {
+	/* height: 69vh; */
+	padding-bottom: calc(31vh - 7em);
 }
 
-/* Structures
+h1 {
+	margin: 1em 0;
+	font-size: 5em;
+	line-height: 1;
+}
 
-- nav           (navigation menu)
-- ul            (navigation menu)
-- p             (text)
-- blockquote    (theorems)
-- img           (image)
-- table, th, td (table)
-*/
-
-p, img, blockquote, table {
-	display: block;
-	width: 100%;
-	margin: 2.5em 0;
+p, nav, img, table, ul {
+	margin-bottom: 4em;
 }
 
 nav {
-	margin: 5em 0;
+	padding-bottom: 1.5em;
+	border-bottom: 2px solid #0AF;
 }
-
-ul {
-	list-style-type: none;
-	margin-left: 2.2em;
+nav a::after {
+	animation: pulsate 1s ease-in-out infinite alternate;
 }
-
-blockquote {
-	width: auto;
-	margin-left: 2.2em;
+nav a:hover::after {
+	display: inline-block;
+	text-decoration: none;
+	white-space: pre;
+	content: " »";
 }
-
-table {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	border-collapse: collapse;
-	border-top: 2.2px solid #EEE;
-	border-bottom: 2.2px solid #EEE;
-}
-
-th, td {
-	padding: 1em 0;
-}
-
-th {
-	border-bottom: 1px solid #EEE;
+@keyframes pulsate {
+	0% {
+		color: #0AF;
+	} 100% {
+		color: #000;
+	}
 }
