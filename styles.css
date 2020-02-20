@@ -84,7 +84,7 @@ a:hover, a:active {
 	color: #0AF;
 }
 nav {
-	padding: 1.5em 0;
+	padding: 3em 0 1.5em;
 	border-bottom: 2px solid #0AF;
 }
 nav a::after {
