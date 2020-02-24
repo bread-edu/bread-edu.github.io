@@ -6,12 +6,10 @@
 	border: 0;
 	margin: 0;
 
-	font-family: serif, "Noto Sans", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	line-height: 2;
 	background-color: #000;
 	color: #DDD;
-
-	border: 0px solid red;
 }
 
 *:lang(ja) {
